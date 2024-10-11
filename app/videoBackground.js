@@ -77,7 +77,7 @@ const VideoBackground = () => {
                 muted
                 className="video-background1"
             >
-                <source src="/assets/texture2.mp4" type="video/mp4" />
+                <source src="/assets/shortTexture.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
             <div className="overlay">
@@ -92,7 +92,7 @@ const VideoBackground = () => {
           </p>
         </h1>
             </div>
-        </div>  */}
+        </div>   */}
         </div>
     );
 };
