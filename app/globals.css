@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gangitem';
+  src: url('./fonts/Gangitem.otf') format('opentype');
+  font-weight: normal; /* Adjust if needed */
+  font-style: normal;
+}
+.canvas{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  z-index: 12;
+  position: absolute;
+}
+.font{
+  font-family: 'Gangitem', sans-serif;
+}
+
+/* styles/globals.css */
+canvas {
+  display: block;
+}
+.horizontal-scroll-container {
+  height: 100vh;
+  overflow: hidden;
+  white-space: nowrap; /* No line breaks */
+}
+
+.horizontal-content {
+  display: flex;
+  height: 100vh;
+}
+
+.box {
+  min-width: 100vw; /* Each box takes full viewport width */
+  height: 100vh;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.scroll-section-outer {
+  overflow: hidden;
+}
+
+.scroll-section-inner {
+  height: 100vh;
+  width: 300vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.scroll-section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-section h3 {
+  color: var(--primaryTextColor);
+  letter-spacing: var(--headlineMedium);
+  font-size: var(--headlineMedium);
+  text-transform: uppercase;
+}
+
+.footer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer span {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: var(--headlineBig);
+  color: var(--primaryTextColor);
+}
+
+.cardContainer{
+  width: 100vw;
+  height: 100vh;
+  margin-top: 50vh;
+  position: sticky;
+  top:1000;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory; 
+}
+.cardContainer::-webkit-scrollbar {
+  display: none; /* Hides scrollbar for WebKit browsers */
+}
+.card{
+  width:100vw;
+  height: 900px;
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top:-10% */
+}
+
+body{
+  scroll-behavior: smooth;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  opacity: 0;
+  touch-action: none;
+  animation: fade-in 5s ease 1s forwards;
+}

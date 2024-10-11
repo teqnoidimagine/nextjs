@@ -1,0 +1,68 @@
+/* src/VideoBackground.css */
+.video-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide any overflow */
+    z-index: 12;
+}
+.video-container1 {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide any overflow */
+    z-index: 12;
+}
+.video-background1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Place video behind text */
+    transform: translate(-50%, -50%);
+    /* filter:  brightness(0.8) contrast(0.8);  */
+}
+
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Place video behind text */
+    transform: translate(-50%, -50%);
+    /* filter:  brightness(0.8) contrast(0.8);  */
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 1; /* Place text above video */
+}
+.overlay1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    z-index: 1; /* Place text above video */
+}
+
+h1 {
+    font-size: 3em; /* Adjust size as needed */
+    margin: 0;
+}
+
+p {
+    font-size: 1.5em; /* Adjust size as needed */
+}
