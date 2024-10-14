@@ -131,3 +131,53 @@ canvas {
   touch-action: none;
   animation: fade-in 5s ease 1s forwards;
 }
+.parallelogram {
+  transform:rotate(30deg) skew(30deg,20deg);
+  display: flex;
+  margin: 5px;
+  padding: 5px;
+  gap: 10px;
+  /* transform:; */
+}
+
+ul { 
+  /* margin: 150px auto 0;  */
+  /* padding: 0;  */
+  list-style: none; 
+  display: table;
+  /* width: 600px; */
+  text-align: center;
+  /* position: absolute; */
+  z-index: 12;
+}
+li { 
+  display: table-cell; 
+  position: relative; 
+  padding: 15px 0;
+}
+a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}

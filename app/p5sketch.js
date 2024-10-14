@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import Image from "next/image";
 // import Logo from '@/app/assets/logo.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 
 const P5Sketch = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -222,16 +223,21 @@ const P5Sketch = () => {
     <div>
     
       <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-full" />
-      <div className='absolute inset-0 flex text-white justify-between m-10 '>
+      <div className='absolute z-15 inset-0 flex text-white justify-between m-10 '>
         
         <div>
           Photo
         </div>
-        <div className=' font-extrabold hover:bg-[#D9F24E]'>
-          {/* <p className='text-4xl text-center bg-white text-[#1f1f1f] '>
-            TEQ<br/>NOID
-          </p> */}
+        <div className='flex'>
+        <ul>
+        <li><Link href="/about">About</Link></li>
+          <li><Link href="/portfolio">Portfolio</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+         </ul>
         </div>
+      
+
         <div>
           Photo
         </div>
