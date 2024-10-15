@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import { AnimatePresence } from 'framer-motion'
 import Link from 'next/link';
-// import '@/styles/styles.scss';
+// import '@/styles/styles.scsws';
 
 export default function App({ Component, pageProps, router }) {
     return (
