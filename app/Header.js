@@ -7,7 +7,7 @@ import Image from "next/image";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 
-const P5Sketch = () => {
+const Header = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const containerRef = useRef(null); // Reference to the horizontal scroll container
@@ -230,7 +230,10 @@ const P5Sketch = () => {
         </div>
         <div className='flex'>
         <ul>
-        <li><Link href="/about">About</Link></li>
+        <li>
+          
+          <Link href="/about">About</Link></li>
+          <li><Link href="/">Home</Link></li>
           <li><Link href="/portfolio">Portfolio</Link></li>
           <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/contact">Contact</Link></li>
@@ -262,4 +265,4 @@ const P5Sketch = () => {
   );
 };
 
-export default P5Sketch;
+export default Header;

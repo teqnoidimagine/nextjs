@@ -181,3 +181,65 @@ a:hover:after {
   width: 100%; 
   left: 0; 
 }
+
+/* @import '../components/Layout/style.css'; */
+
+.main .header {
+    display: flex;
+    gap: 15px;
+    padding: 40px;
+    height: 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+
+.main .header a {
+    text-decoration: none;
+    color: black;
+}
+
+.main .header a:hover {
+    text-decoration: underline;
+}
+
+.main .page {
+    padding: 40px;
+    min-height: calc(100vh - 80px);
+}
+
+.main h1 {
+    margin-top: 50px;
+}
+
+.main .body {
+    display: flex;
+    gap: 40px;
+}
+
+/* Styles for the curve component */
+.curve svg,
+.curve .background {
+    position: fixed;
+    height: calc(100vh + 600px);
+    width: 100vw;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+}
+
+.curve .background {
+    background-color: black;
+    transition: opacity 0s linear 0.1s;
+}
+
+.curve .route {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    font-size: 46px;
+    z-index: 3;
+    transform: translateX(-50%);
+    text-align: center;
+}
