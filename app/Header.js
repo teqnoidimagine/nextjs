@@ -7,7 +7,7 @@ import Image from "next/image";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 
-const Header = () => {
+ const Header = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const containerRef = useRef(null); // Reference to the horizontal scroll container
@@ -223,29 +223,7 @@ const Header = () => {
     <div>
     
       <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-full" />
-      <div className='absolute z-15 inset-0 flex text-white justify-between m-10 '>
-        
-        <div>
-          Photo
-        </div>
-        <div className='flex'>
-        <ul>
-        <li>
-          
-          <Link href="/about">About</Link></li>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/portfolio">Portfolio</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-         </ul>
-        </div>
-      
-
-        <div>
-          Photo
-        </div>
-        
-        </div>
+   
 
       <div className="absolute inset-0 flex items-center justify-between z-10 p-20 pl-48">
         <div className="text-center mt-8 animate-text text-white uppercase font-bold">

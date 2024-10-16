@@ -48,7 +48,7 @@ export default function Curve({ children, backgroundColor }) {
       />
       {/* Dynamically display route */}
       <motion.p className="route" {...anim(text)}>
-        {routes[pathname] || 'Home'}
+        {/* {routes[pathname] || 'Home'} */}
       </motion.p>
 
       {/* Render SVG only if dimensions are available */}
