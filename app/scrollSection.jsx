@@ -93,7 +93,7 @@ card 3
     </section> */}
   
     <VideoBackground /> 
-     {/* <CardSection className="height-[100vh]"/> */}
+     <CardSection className="height-[80vh]"/>
     {/* <GradientSketch /> */}
     </>
   );

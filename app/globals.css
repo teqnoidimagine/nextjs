@@ -243,3 +243,48 @@ a:hover:after {
     transform: translateX(-50%);
     text-align: center;
 }
+
+
+/* Custom background images */
+/* Custom background images from local assets */
+.bg-image-one {
+  background-image: url('../public/assets/TeqLogo.png');
+  background-size: cover; /* Ensure the image covers the div */
+  background-position: center; /* Center the background image */
+}
+
+.bg-image-two {
+  background-image: url('../public/assets/TeqnLogoFull1.png');
+  background-size: cover; /* Ensure the image covers the div */
+  background-position: center; /* Center the background image */
+}
+
+/* Set the default properties */
+.sudo {
+  position: relative; /* To position absolute children */
+  width: 20px; /* Initial width */
+  height: 40px; /* Set a fixed height */
+  overflow: hidden; /* Hide overflow to prevent showing the second image initially */
+  cursor: pointer;
+}
+
+/* Control the opacity and width */
+.bg-image-two {
+  opacity: 0; /* Initially hidden */
+  width: 0; /* Set initial width to 0 */
+}
+
+/* On hover, show the second image and adjust the container width */
+.sudo:hover .bg-image-one {
+  opacity: 0; /* Hide first image */
+}
+
+.sudo:hover .bg-image-two {
+  opacity: 1; /* Show second image */
+  width: 150px; /* Set width on hover */
+}
+
+.sudo:hover {
+  width: 150px; /* Expand the container width on hover */
+}
+

@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Curve backgroundColor={'#BCF366'}>
-        <h1>About</h1>
+        {/* <h1>About</h1> */}
         <div className="body">
           {/* <p>
             {' '}
