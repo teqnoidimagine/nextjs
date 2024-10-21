@@ -2,12 +2,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-// import sea from "@/web/public/assets/sea.jpg"
-// import boat from "@/web/public/assets/boat.jpg"
-// import sky from "@/web/public/assets/sky.jpg"
-import Image from "next/image";
+
 import {CardSection }from '@/app/cards'
-import GradientSketch from "@/app/gradientSketch"
 import VideoBackground from "./videoBackground"
 function ScrollSection() {
   const sectionRef = useRef(null);

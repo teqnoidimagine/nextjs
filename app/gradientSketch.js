@@ -1,6 +1,6 @@
 // components/GradientSketch.js
 "use client"
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import p5 from 'p5';
 
 const GradientSketch = () => {

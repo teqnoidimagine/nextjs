@@ -2,10 +2,8 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
 import gsap from 'gsap';
-import Image from "next/image";
 // import Logo from '@/app/assets/logo.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Link from 'next/link';
 
  const Header = () => {
   gsap.registerPlugin(ScrollTrigger);

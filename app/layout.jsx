@@ -3,11 +3,6 @@
 import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import './globals.css';
-// import '@/styles/styles.scss';
-import TeqLogo from  '../public/assets/TeqLogo.png'
-import TeqLogoFull from  '../public/assets/TeqnLogoFull1.png'
-import Image from 'next/image';
-import AnimatedButton from './components/Layout/AnimatedButton'
 import VideoBackground from "@/app/videoBackground"
 import ScrollSection from '@/app/scrollSection'
 export default function RootLayout({ children }) {
