@@ -1,5 +1,4 @@
 // import Curve from '@/components/Layout/Curve'
-import Head from 'next/head';
 import Curve from '../components/Layout/page';
 
 export default function About() {

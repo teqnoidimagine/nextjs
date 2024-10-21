@@ -20,7 +20,7 @@ export const CardSection = () => (
   </Canvas> </div>
 )
 
-function Scene({ children, ...props }) {
+function Scene({  ...props }) {
   const ref = useRef()
   const scroll = useScroll()
   const [hovered, hover] = useState(null)

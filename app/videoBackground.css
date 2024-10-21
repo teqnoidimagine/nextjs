@@ -68,7 +68,7 @@ p {
 }
 /* components/MovingText.module.css */
 /* components/MovingText.module.css */
-
+/* Add this to your CSS file */
 .marquee {
     overflow: hidden;
     white-space: nowrap;
@@ -76,18 +76,17 @@ p {
   }
   
   .marquee p {
-    display: inline-block;
-    /* padding-left: 100%; */
-    animation: marquee 40s linear infinite;
+    display: inline-block;/* Padding creates space for the animation to start */
+    animation: marquee 10s linear infinite; /* Adjust the speed if necessary */
   }
   
   @keyframes marquee {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
-    /* styles/globals.css or directly in your JSX */
-
-.z-12, .z-14 {
+  
+  /* styles/globals.css or directly in your JSX */
+  .z-12, .z-14 {
     position: absolute;
     top: 0;
     left: 0;
@@ -97,11 +96,8 @@ p {
   
   .z-13 {
     position: absolute;
-    top: 50%;
+    top: 40%; /* Adjust top percentage as needed */
     left: 50%;
     transform: translate(-50%, -50%);
-    /* width: 100%; */
   }
-  
-  
   

@@ -298,7 +298,6 @@ a:hover:after {
 .sudo:hover {
   width: 150px; /* Expand the container width on hover */
 }
-
 footer {
   background-color: #d8d8d8;
   color: #080808;
@@ -306,24 +305,28 @@ footer {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  font-size: 140px;
+  font-size: 140px; /* You can adjust this if needed */
 }
 
+/* Marquee Container */
 .custom-footer-marquee {
   display: flex;
   align-items: center;
   white-space: nowrap;
   overflow: hidden;
+  position: relative;
 }
 
+/* Text Animation */
 .custom-footer-text {
   display: inline-block;
-  padding:0;
-  margin: 0;
-
   animation: scroll-left 14s linear infinite;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
 }
 
+/* Keyframes for the scrolling text */
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);

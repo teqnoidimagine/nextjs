@@ -47,22 +47,23 @@ const VideoBackground = () => {
 
     return (
         <div>
-    <div className='relative w-full h-screen overflow-hidden'>
-      <div className='z-12 absolute flex items-end justify-end'>
-        <Image src={mySvgBG} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0 ' />
-      </div>
-      <div className='z-13 absolute flex justify-center items-center top-40'>
-      <div className="text-[150px] marquee font-uppercase text-white uppercase">
-      <text x="50%" y="30" className="text">
-        Frontend web development - Backend development
-      </text>
+<div className='relative w-full h-screen overflow-hidden bg-black'>
+  <div className='z-12 absolute flex items-end justify-end'>
+    <Image src={mySvgBG} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0 ' />
+  </div>
+  
+  <div className='z-13 absolute flex justify-center items-center'>
+    <div className="text-[150px] marquee font-uppercase text-white uppercase">
+      <p>
+      Frontend web development - Backend development
+      </p>
     </div>
-      </div>
-      <div className='z-14 absolute flex items-end justify-end'>
-        <Image src={mySvg} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0' />
-      </div>
-    </div>
-   
+  </div>
+
+  <div className='z-14 absolute flex items-end justify-end'>
+    <Image src={mySvg} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0' />
+  </div>
+</div>
 
 
 
@@ -110,7 +111,6 @@ const VideoBackground = () => {
             <span>Every</span><br />
             <span className="font-gangItem font px-5 font-normal">Stage from Pre-seed </span>
             <span>to series C</span><br />
-           
           </p>
         </h1>
             </div>

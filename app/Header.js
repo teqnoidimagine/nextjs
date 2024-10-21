@@ -4,7 +4,7 @@ import p5 from 'p5';
 import gsap from 'gsap';
 // import Logo from '@/app/assets/logo.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import Chakra from './components/Layout/chakra'
  const Header = () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -226,6 +226,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
       <div className="absolute inset-0 flex items-center justify-between z-10 p-20 pl-48">
         <div className="text-center mt-8 animate-text text-white uppercase font-bold">
           <div className="leading-[140px] text-[155px]">
+            <Chakra />
             <span className="bg-[#D9F24E] text-[#1f1f1f] p-5 transform rotate-[-3deg] inline-block">
               Unleash
             </span>
