@@ -22,7 +22,7 @@
   background-color: white;
   z-index: 12;
   position: relative;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   overflow: hidden;
 }
 
@@ -299,3 +299,36 @@ a:hover:after {
   width: 150px; /* Expand the container width on hover */
 }
 
+footer {
+  background-color: #d8d8d8;
+  color: #080808;
+  padding: 20px;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 140px;
+}
+
+.custom-footer-marquee {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.custom-footer-text {
+  display: inline-block;
+  padding:0;
+  margin: 0;
+
+  animation: scroll-left 14s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

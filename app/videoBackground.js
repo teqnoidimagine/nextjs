@@ -91,7 +91,7 @@ const VideoBackground = () => {
             </div>
         </div> */}
        
-        {/* <div className="video-container1">
+        <div className="video-container1">
             <video
                 ref={videoRef}
                 autoPlay
@@ -114,7 +114,7 @@ const VideoBackground = () => {
           </p>
         </h1>
             </div>
-        </div>   */}
+        </div>  
         </div>
     );
 };
