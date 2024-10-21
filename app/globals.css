@@ -8,13 +8,24 @@
   font-weight: normal; /* Adjust if needed */
   font-style: normal;
 }
+.canvas::-webkit-scrollbar {
+  display: none;
+}
+
+.canvas {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .canvas{
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 80vh;
   background-color: white;
   z-index: 12;
-  position: absolute;
+  position: relative;
+  border: 1px solid red;
+  overflow: hidden;
 }
+
 .font{
   font-family: 'Gangitem', sans-serif;
 }

@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import {CardSection }from '@/app/cards'
 import GradientSketch from "@/app/gradientSketch"
-import VideoBackground from "@/app/videoBackground"
+import VideoBackground from "./videoBackground"
 function ScrollSection() {
   const sectionRef = useRef(null);
   const triggerRef = useRef(null);
@@ -97,6 +97,7 @@ card 3
     {/* <GradientSketch /> */}
     </>
   );
+
 }
 
 export default ScrollSection;

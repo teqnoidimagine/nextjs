@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef } from 'react';
-import './VideoBackground.css';
+import './videoBackground.css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import mySvg from '/assets/ss.svg'; // Path to your SVG file

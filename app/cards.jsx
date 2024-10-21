@@ -13,7 +13,7 @@ export const CardSection = () => (
     <div className="canvas ">
 
    
-  <Canvas  dpr={[1, 1.5]}>
+  <Canvas dpr={[1, 1.5]}>
     <ScrollControls pages={4} infinite>
       <Scene position={[0, 1.5, 0]} />
     </ScrollControls>
@@ -31,7 +31,7 @@ function Scene({ children, ...props }) {
     state.camera.lookAt(0, 0, 0)
   })
   return (
-    <group ref={ref} {...props}>
+    <group ref={ref} {...props} >
       <Cards  from={0} len={Math.PI / 4} onPointerOver={hover} onPointerOut={hover} />
       <Cards from={Math.PI / 4} len={Math.PI / 2} position={[0, 0.4, 0]} onPointerOver={hover} onPointerOut={hover} />
       <Cards  from={Math.PI / 4 + Math.PI / 2} len={Math.PI / 2} onPointerOver={hover} onPointerOut={hover} />
