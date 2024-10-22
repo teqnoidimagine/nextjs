@@ -11,7 +11,10 @@
 .canvas::-webkit-scrollbar {
   display: none;
 }
-
+.navbar{
+  position: sticky;
+  z-index: 18;
+}
 .canvas {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -19,7 +22,9 @@
 .canvas{
   width: 80vw;
   height: 80vh;
+  margin: 15vh;
   background-color: white;
+  border-radius: 20px;
   z-index: 12;
   position: relative;
   /* border: 1px solid red; */
@@ -167,7 +172,7 @@ li {
   padding: 15px 0;
 }
 a {
-  color: #fff;
+  /* color: #fff; */
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.15em;
@@ -229,7 +234,7 @@ a:hover:after {
 }
 
 /* Styles for the curve component */
-.curve svg,
+.curve 
 .curve .background {
     position: fixed;
     height: calc(100vh + 600px);
@@ -277,6 +282,14 @@ a:hover:after {
   height: 40px; /* Set a fixed height */
   overflow: hidden; /* Hide overflow to prevent showing the second image initially */
   cursor: pointer;
+  z-index: 17;
+}
+.sudo1 {
+  position: relative; /* To position absolute children */
+  /* width: 100px; */
+  overflow: hidden; /* Hide overflow to prevent showing the second image initially */
+  cursor: pointer;
+  z-index: 17;
 }
 
 /* Control the opacity and width */
@@ -303,11 +316,14 @@ footer {
   color: #080808;
   padding: 20px;
   position: relative;
-  height: 100vh;
+  height: 120vh;
   overflow: hidden;
   font-size: 140px; /* You can adjust this if needed */
 }
-
+footer li {
+  padding: 0;
+  margin: 0;
+}
 /* Marquee Container */
 .custom-footer-marquee {
   display: flex;

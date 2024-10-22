@@ -223,15 +223,33 @@ import Chakra from './components/Layout/chakra'
       <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-[2000px]" />
    
 
-      <div className="absolute inset-0 flex items-center justify-between z-10 p-20 pl-48">
+      <div className="absolute inset-0 flex items-center justify-center z-10 p-20 pl-48">
         <div className="text-center mt-8 animate-text text-white uppercase font-bold">
-          <div className="leading-[140px] text-[155px]">
-            <Chakra />
-            <span className="bg-[#D9F24E] text-[#1f1f1f] p-5 transform rotate-[-3deg] inline-block">
-              Unleash
-            </span>
-            your <br /> Brand    Potential
-          </div>
+        <div className="leading-[140px] text-[155px]">
+  {/* First Line: "Unleash", Chakra SVG, and "your" */}
+  <div className="flex items-start">
+    <span className="bg-[#D9F24E] text-[#1f1f1f] p-5 transform rotate-[-3deg] inline-block">
+      Unleash
+    </span>
+
+    {/* Chakra SVG immediately after "Unleash" */}
+    <span className="inline-block m-2 mt-[-32px]">
+      <Chakra />
+    </span>
+
+    <span className="inline-block">
+      your
+    </span>
+  </div>
+
+  {/* Second Line: "Brand Potential" */}
+  <div className="block">
+    Brand  Potential
+  </div>
+</div>
+
+
+
           <span className="block leading-[140px] text-[155px]">
          
           </span>

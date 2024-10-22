@@ -30,6 +30,7 @@ const VideoBackground = () => {
             end: "2000 top",
             scrub: 0.05,
             pin: true,
+            // markers:true
           },
         }
       );
