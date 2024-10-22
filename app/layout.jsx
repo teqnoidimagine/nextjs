@@ -15,25 +15,27 @@ gsap.registerPlugin(ScrollTrigger);
 export default function RootLayout({ children }) {
   const [isBlack, setIsBlack] = useState(false);
 
-  const handleScroll = () => {
-    const scrollHeight = window.scrollY || window.pageYOffset;
-
-    // Change background color at 100px or 10vh
-    if (scrollHeight >= window.innerHeight * 0.1) {
-      setIsBlack(true);
-    } else {
-      setIsBlack(false);
-    }
-  };
-
   useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        const scrollHeight = window.scrollY || window.pageYOffset;
+
+        // Change background color at 100px or 10vh
+        if (scrollHeight >= window.innerHeight * 0.1) {
+          setIsBlack(true);
+        } else {
+          setIsBlack(false);
+        }
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isBlack]);
+  }, []); // Remove isBlack from dependency array
 
   return (
     <html lang="en">
