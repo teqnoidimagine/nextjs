@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { AnimatePresence } from "framer-motion";
-import Link from "next/link";
-import "./globals.css";
-import VideoBackground from "@/app/videoBackground";
-import ScrollSection from "@/app/scrollSection";
-// import AnimatedDivider from "./components/Layout/AnimatedDivider";
-import { useEffect, useState } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import './globals.css';
+import VideoBackground from '@/app/videoBackground';
+import ScrollSection from '@/app/scrollSection';
+import AnimatedDivider from './components/Layout/AnimatedDivider';
+import { useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function RootLayout({ children }) {
   const [isBlack, setIsBlack] = useState(false);
@@ -25,11 +25,11 @@ export default function RootLayout({ children }) {
     };
 
     // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -47,26 +47,30 @@ export default function RootLayout({ children }) {
                   </div>
                 </div>
               </div>
-              <div className={`flex ${isBlack ? "bg-white text-black" : ""}`}>
+              <div className={`flex ${isBlack ? 'bg-white text-black' : ''}`}>
                 <ul>
-                  <li className={`${isBlack ? "text-black" : "text-white"}`}>
+                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
                     <Link href="/">Home</Link>
                   </li>
-                  <li className={`${isBlack ? "text-black" : "text-white"}`}>
+                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
                     <Link href="/about">About</Link>
                   </li>
-                  <li className={`${isBlack ? "text-black" : "text-white"}`}>
+                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
                     <Link href="/portfolio">Portfolio</Link>
                   </li>
-                  <li className={`${isBlack ? "text-black" : "text-white"}`}>
+                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
                     <Link href="/blog">Blog</Link>
                   </li>
-                  <li className={`${isBlack ? "text-black" : "text-white"}`}>
+                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
                     <Link href="/contact">Contact</Link>
                   </li>
                 </ul>
               </div>
-              <div className={`sudo1 z-16 p-4 w-36 ${isBlack ? "bg-white text-black" : "bg-black text-white"} text-center text-lg flex items-center justify-center rounded-xl`}>
+              <div
+                className={`sudo1 z-16 p-4 w-36 ${
+                  isBlack ? 'bg-white text-black' : 'bg-black text-white'
+                } text-center text-lg flex items-center justify-center rounded-xl`}
+              >
                 GET <br />
                 STARTED
               </div>
@@ -78,7 +82,11 @@ export default function RootLayout({ children }) {
           <VideoBackground />
           <ScrollSection />
           <footer>
-            <div className={`text-xl flex gap-24 px-[5%] pt-[15%] ${isBlack ? "text-black" : "text-white"}`}>
+            <div
+              className={`text-xl flex gap-24 px-[5%] pt-[15%] ${
+                isBlack ? 'text-black' : 'text-white'
+              }`}
+            >
               <ul className="flex flex-col text-left">
                 DISCOVER
                 <li>About</li>
@@ -106,6 +114,38 @@ export default function RootLayout({ children }) {
                 <li>Indigo</li>
                 <li>Jobket</li>
               </ul>
+            </div>
+            <AnimatedDivider />
+            <div className="custom-footer-marquee  mt-8">
+              <p className=" custom-footer-text">
+                <span className="font-gangItem font px-10">TEQNOID</span>
+                <span className="font-gangItem font px-10">TO BUILD</span>
+                <span>YOUR</span>
+                <span className="font-gangItem font px-5 font-normal">
+                  VISION
+                </span>
+                <span>TEQNOID</span>
+                <span className="font-gangItem font px-10">TO BUILD</span>
+                <span>YOUR</span>
+                <span className="font-gangItem font px-5 font-normal">
+                  VISION
+                </span>
+                <span>TEQNOID</span>
+
+                <span className="font-gangItem font px-10">TEQNOID</span>
+                <span className="font-gangItem font px-10">TO BUILD</span>
+                <span>YOUR</span>
+                <span className="font-gangItem font px-5 font-normal">
+                  VISION
+                </span>
+                <span>TEQNOID</span>
+                <span className="font-gangItem font px-10">TO BUILD</span>
+                <span>YOUR</span>
+                <span className="font-gangItem font px-5 font-normal">
+                  VISION
+                </span>
+                <span>TEQNOID</span>
+              </p>
             </div>
           </footer>
         </div>
