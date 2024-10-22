@@ -5,7 +5,7 @@ import Link from "next/link";
 import "./globals.css";
 import VideoBackground from "@/app/videoBackground";
 import ScrollSection from "@/app/scrollSection";
-import AnimatedDivider from "./components/Layout/AnimatedDivider";
+// import AnimatedDivider from "./components/Layout/AnimatedDivider";
 import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
