@@ -1,4 +1,4 @@
-import Curve from '../components/Layout/page';
+import Curve from '../components/Layout/curve';
 
 import Head from 'next/head'
 
