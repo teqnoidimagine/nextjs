@@ -1,6 +1,6 @@
 'use client';
 import Header from './Header'
-import Curve from './components/Layout/page';
+import Curve from './components/Layout/curve';
 
 export default function Home() {
   return (
