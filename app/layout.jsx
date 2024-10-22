@@ -90,15 +90,15 @@ export default function RootLayout({ children }) {
               </ul>
               <ul className="flex flex-col text-left">
                 SERVICES
-                <li>Branding & UX UI Design</li>
-                <li>Video, Animation & Illustration</li>
-                <li>Web & App Development</li>
+                <li>Branding &amp; UX UI Design</li>
+                <li>Video, Animation &amp; Illustration</li>
+                <li>Web &amp; App Development</li>
               </ul>
               <ul className="flex flex-col text-left">
                 CASE STUDIES
                 <li>DCC Animal Hospital</li>
                 <li>DCC in India</li>
-                <li>A'alda Vet 360</li>
+                <li>A&apos;alda Vet 360</li>
                 <li>Pandaa</li>
                 <li>Roperro</li>
                 <li>Azar</li>
@@ -115,4 +115,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
