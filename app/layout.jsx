@@ -10,32 +10,28 @@ import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function RootLayout({ children }) {
   const [isBlack, setIsBlack] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== "undefined") {
-        const scrollHeight = window.scrollY || window.pageYOffset;
+    // Register GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
 
-        // Change background color at 100px or 10vh
-        if (scrollHeight >= window.innerHeight * 0.1) {
-          setIsBlack(true);
-        } else {
-          setIsBlack(false);
-        }
-      }
+    const handleScroll = () => {
+      const scrollHeight = window.scrollY || window.pageYOffset;
+
+      // Change background color at 100px or 10vh
+      setIsBlack(scrollHeight >= window.innerHeight * 0.1);
     };
 
+    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Remove isBlack from dependency array
+  }, []);
 
   return (
     <html lang="en">
