@@ -335,7 +335,7 @@ footer li {
 }
 /* Marquee Container */
 .custom-footer-marquee {
-  margin-top:15vh;
+  margin-top:20vh;
   display: flex;
   align-items: center;
   white-space: nowrap;

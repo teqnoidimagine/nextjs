@@ -84,7 +84,7 @@ export default function RootLayout({ children }) {
           <ScrollSection />
           <footer>
             <div
-              className={`text-xl flex gap-24 px-[5%] pt-[5%] ${
+              className={`text-xl flex gap-24 px-[5%] pt-[7%] ${
                 isBlack ? 'text-black' : 'text-white'
               }`}
             >
