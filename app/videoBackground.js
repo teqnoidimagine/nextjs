@@ -68,7 +68,7 @@ const VideoBackground = () => {
 
 
 
-{/* <div className="video-container">
+<div className="video-container">
             <video
                 ref={videoRef}
                 autoPlay
@@ -82,17 +82,39 @@ const VideoBackground = () => {
             <div className="overlay">
             <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
           <p className="animate-text ">
+            {/* <span>AI1 to </span>
+            <span className="font-gangItem font px-10 font-normal"> SaaS</span>
+            <span>To</span><br />
+            <span className="font-gangItem font px-5 font-normal">Deeptech </span>
+            <span>to series C</span><br /> */}
+           
+          </p>
+        </h1>
+            </div>
+        </div>
+          <div className="video-container2">
+            <video
+                ref={videoRef}
+                autoPlay
+                loop
+                muted
+                className="video-background2"
+            >
+                <source src="/assets/bgGradient.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div className="overlay">
+            <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
+          <p className="animate-text ">
             <span>Empowering </span>
             <span className="font-gangItem font px-10 font-normal"> Startups At</span>
             <span>Every</span><br />
             <span className="font-gangItem font px-5 font-normal">Stage from Pre-seed </span>
             <span>to series C</span><br />
-           
           </p>
         </h1>
             </div>
-        </div> */}
-       
+        </div>  
         <div className="video-container1">
             <video
                 ref={videoRef}
@@ -107,11 +129,11 @@ const VideoBackground = () => {
             <div className="overlay">
             <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
           <p className="animate-text ">
-            <span>Empowering </span>
-            <span className="font-gangItem font px-10 font-normal"> Startups At</span>
-            <span>Every</span><br />
-            <span className="font-gangItem font px-5 font-normal">Stage from Pre-seed </span>
-            <span>to series C</span><br />
+          <span>Ai to </span>
+            <span className="font-gangItem font px-10 font-normal"> SaaS</span>
+            <span>to</span><br />
+            <span className="font-gangItem font px-5 font-normal">Deeptech </span>
+            {/* <span>to series C</span><br /> */}
           </p>
         </h1>
             </div>

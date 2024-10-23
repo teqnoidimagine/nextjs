@@ -23,7 +23,7 @@
   width: 80vw;
   height: 80vh;
   margin: 15vh;
-  background-color: white;
+  background-color: transparent;
   border-radius: 20px;
   z-index: 12;
   position: relative;
@@ -197,12 +197,12 @@ a:after {
 a:hover:after { 
   width: 100%; 
   left: 0; 
-  color:aqua
+  color:#D9F24E
 }
 a:hover { 
   width: 100%; 
   left: 0; 
-  color:aqua
+  color:#D9F24E
 }
 
 
@@ -245,7 +245,7 @@ a:hover {
 .curve 
 .curve .background {
     position: fixed;
-    height: calc(100vh + 600px);
+    /* height: calc(100vh + 600px); */
     width: 100vw;
     pointer-events: none;
     left: 0;
@@ -324,7 +324,7 @@ footer {
   color: #080808;
   padding: 20px;
   position: relative;
-  height: 120vh;
+  height: 100vh;
   overflow: hidden;
   font-size: 140px; /* You can adjust this if needed */
 }
@@ -334,6 +334,7 @@ footer li {
 }
 /* Marquee Container */
 .custom-footer-marquee {
+  margin-top:15vh;
   display: flex;
   align-items: center;
   white-space: nowrap;
