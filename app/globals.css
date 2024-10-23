@@ -245,7 +245,7 @@ a:hover {
 .curve 
 .curve .background {
     position: fixed;
-    height: 100vh ;
+    height: calc(100vh + 600px);
     width: 100vw;
     pointer-events: none;
     left: 0;
