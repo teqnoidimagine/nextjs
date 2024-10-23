@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <Curve backgroundColor={'black'}>
+        <Curve backgroundColor={''}>
           <Header />
         </Curve>
       </div>

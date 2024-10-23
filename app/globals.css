@@ -238,7 +238,7 @@ a:hover {
 
 .main .body {
     display: flex;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
 /* Styles for the curve component */
@@ -253,7 +253,7 @@ a:hover {
 }
 
 .curve .background {
-    background-color: black;
+    /* background-color: black; */
     transition: opacity 0s linear 0.1s;
 }
 
