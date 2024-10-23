@@ -39,58 +39,10 @@ function ScrollSection() {
   return (
 <>
 
-    {/* <section className="scroll-section-outer">
-    
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="scroll-section-inner">
-          <div className="scroll-section">
-            <Image src={sea}/>
-          </div>
-          <div className="scroll-section">
-          <Image src={boat}/>
-          </div>
-          <div className="scroll-section">
-          <Image src={sky}/>
-          </div>
-         
-          
-        </div>
-      </div>
-      <section>
-    <div  className="flex align-middle justify-between  items-center bg-[#fffffa]">
-      <div  className="flex flex-col align-middle justify-center text pl-[20vh] py-[15vh] items-baseline">
-        <p className="text-2xl ">Our powerful payment APIs are built to scale with you from day one to millions of users. Let's start building.</p>
-        <button className="text-2xl bg-black p-8 text-white mt-5 rounded-xl">View API Docs</button>
-      </div>
-        <h1 className="text-9xl p-[30vh] py-[15vh] font-bold flex items-center justify-center text-center">
-          <p className="animate-text ">
-            <span>TOOLS</span>
-            <span className="font-gangItem font px-10 font-normal">TO BUILD</span>
-            <span>YOUR</span><br />
-            <span className="font-gangItem font px-5 font-normal">VISION</span>
-           
-          </p>
-        </h1>
-      </div>
-    </section>
-  
-      <div className="cardContainer">
-        <div className="card bg-slate-500 "> 
-card1
-        </div>
-        <div className="card bg-slate-800 "> 
-        card 2
-</div>
-<div className="card bg-slate-100 "> 
-card 3
-</div>
-      
-      </div>
-    </section> */}
   
     <VideoBackground /> 
-     <CardSection className="height-[80vh]"/>
-    {/* <GradientSketch /> */}
+     <CardSection className="height-[80vh] mt-80vh"/>
+
     </>
   );
 

@@ -80,7 +80,7 @@ export default function RootLayout({ children }) {
 
           <AnimatePresence mode="wait">{children}</AnimatePresence>
 
-          <VideoBackground />
+          {/* <VideoBackground /> */}
           <ScrollSection />
           <footer>
             <div
