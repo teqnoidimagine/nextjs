@@ -220,7 +220,7 @@ import Chakra from './components/Layout/chakra'
   return (
     <div>
     
-      <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-[2000px]" />
+      <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-[1000px]" />
    
 
       <div className="absolute inset-0 flex items-center justify-center z-10 p-20 pl-48">

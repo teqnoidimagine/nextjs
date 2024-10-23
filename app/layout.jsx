@@ -37,45 +37,46 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="main">
-          <nav className="navbar sticky top-0 z-50">
-            <div className="absolute z-15 inset-0 flex gap-20 justify-between m-10 mt-0 h-[150px] items-center">
-              <div className="z-16 p-4 bg-black flex items-center justify-center rounded-xl relative">
-                <div className="flex flex-col items-center justify-center">
-                  <div className="sudo relative w-20 h-40 transition-all duration-300 ease-in-out overflow-hidden">
-                    <div className="bg-image-one absolute inset-0 transition-opacity duration-300 ease-in-out"></div>
-                    <div className="bg-image-two absolute inset-0 transition-all duration-300 ease-in-out opacity-0 w-0 h-full"></div>
-                  </div>
-                </div>
-              </div>
-              <div className={`flex ${isBlack ? 'bg-white text-black' : ''}`}>
-                <ul>
-                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
-                    <Link href="/">Home</Link>
-                  </li>
-                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
-                    <Link href="/about">About</Link>
-                  </li>
-                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
-                    <Link href="/portfolio">Portfolio</Link>
-                  </li>
-                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
-                    <Link href="/blog">Blog</Link>
-                  </li>
-                  <li className={`${isBlack ? 'text-black' : 'text-white'}`}>
-                    <Link href="/contact">Contact</Link>
-                  </li>
-                </ul>
-              </div>
-              <div
-                className={`sudo1 z-16 p-4 w-36 ${
-                  isBlack ? 'bg-white text-black' : 'bg-black text-white'
-                } text-center text-lg flex items-center justify-center rounded-xl`}
-              >
-                GET <br />
-                STARTED
-              </div>
-            </div>
-          </nav>
+        <nav className="navbar sticky top-0 z-50">
+  <div className="absolute z-15 inset-0 flex gap-20 justify-between m-10 mt-0 h-[150px] items-center">
+    <div className="z-16 p-4 bg-black flex items-center justify-center rounded-xl relative">
+      <div className="flex flex-col items-center justify-center">
+        <div className="sudo relative w-20 h-40 transition-all duration-300 ease-in-out overflow-hidden">
+          <div className="bg-image-one absolute inset-0 transition-opacity duration-300 ease-in-out"></div>
+          <div className="bg-image-two absolute inset-0 transition-all duration-300 ease-in-out opacity-0 w-0 h-full"></div>
+        </div>
+      </div>
+    </div>
+    <div className={`flex transition-all rounded-xl duration-500 ease-in ${isBlack ? 'bg-white text-[#1F1F1F]' : 'bg-[#1F1F1F] text-white'}`}>
+      <ul>
+        <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
+          <Link href="/">Home</Link>
+        </li>
+        <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
+          <Link href="/about">About</Link>
+        </li>
+        <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
+          <Link href="/portfolio">Portfolio</Link>
+        </li>
+        <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
+          <Link href="/blog">Blog</Link>
+        </li>
+        <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
+          <Link href="/contact">Contact</Link>
+        </li>
+      </ul>
+    </div>
+    <div
+      className={`sudo1 z-16 p-4 w-36 transition-all duration-500 ease-in-out 
+        bg-white text-black
+       text-center text-lg flex items-center justify-center rounded-xl`}
+    >
+      GET <br />
+      STARTED
+    </div>
+  </div>
+</nav>
+
 
           <AnimatePresence mode="wait">{children}</AnimatePresence>
 
@@ -83,7 +84,7 @@ export default function RootLayout({ children }) {
           <ScrollSection />
           <footer>
             <div
-              className={`text-xl flex gap-24 px-[5%] pt-[15%] ${
+              className={`text-xl flex gap-24 px-[5%] pt-[5%] ${
                 isBlack ? 'text-black' : 'text-white'
               }`}
             >

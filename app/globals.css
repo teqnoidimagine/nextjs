@@ -191,12 +191,20 @@ a:after {
   position: absolute;
   background: #fff;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  color:aqua;
   width: 0;
 }
 a:hover:after { 
   width: 100%; 
   left: 0; 
+  color:aqua
 }
+a:hover { 
+  width: 100%; 
+  left: 0; 
+  color:aqua
+}
+
 
 /* @import '../components/Layout/style.css'; */
 

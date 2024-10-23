@@ -77,12 +77,12 @@ p {
   
   .marquee p {
     display: inline-block;/* Padding creates space for the animation to start */
-    animation: marquee 10s linear infinite; /* Adjust the speed if necessary */
+    animation: marquee 20s linear infinite; /* Adjust the speed if necessary */
   }
   
   @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
   }
   
   /* styles/globals.css or directly in your JSX */

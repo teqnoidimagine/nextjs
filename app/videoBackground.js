@@ -50,7 +50,7 @@ const VideoBackground = () => {
         <div>
 <div className='relative w-full h-screen overflow-hidden bg-black'>
   <div className='z-12 absolute flex items-end justify-end'>
-    <Image src={mySvgBG} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0 ' />
+    <Image src={mySvgBG} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 ml-96 right-0 ' />
   </div>
   
   <div className='z-13 absolute flex justify-center items-center'>
@@ -62,7 +62,7 @@ const VideoBackground = () => {
   </div>
 
   <div className='z-14 absolute flex items-end justify-end'>
-    <Image src={mySvg} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 right-0' />
+    <Image src={mySvg} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 ml-96 right-0' />
   </div>
 </div>
 
