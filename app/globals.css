@@ -321,7 +321,7 @@ a:hover {
   width: 150px; /* Expand the container width on hover */
 }
 footer {
-  background-color: #d8d8d8;
+  /* background-color: #d8d8d8; */
   color: #080808;
   /* padding: 20px; */
   position: relative;
@@ -369,3 +369,4 @@ footer li {
   overflow: hidden; /* Hide any overflow */
   z-index: 12;
 }
+/*  */
