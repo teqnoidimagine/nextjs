@@ -6,13 +6,18 @@ import './globals.css';
 import VideoBackground from '@/app/videoBackground';
 import ScrollSection from '@/app/scrollSection';
 import AnimatedDivider from './components/Layout/AnimatedDivider';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function RootLayout({ children }) {
   const [isBlack, setIsBlack] = useState(false);
-
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (videoRef.current) {
+        videoRef.current.playbackRate = 0.75; // Adjust the playback speed (0.75 = 75%)
+    }
+}, []);
   useEffect(() => {
     // Register GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
@@ -83,8 +88,19 @@ export default function RootLayout({ children }) {
           {/* <VideoBackground /> */}
           <ScrollSection />
           <footer>
+<div className='video-container'>
+<video
+                // ref={videoRef}
+                autoPlay
+                loop
+                muted
+                className="video-background1"
+            >
+                <source src="/assets/FooterVideo.mp4" type="video/mp4" /></video>
+</div>
+       
             <div
-              className={`text-xl flex gap-24 px-[5%] pt-[7%] ${
+              className={`text-xl flex gap-24 px-[5%] pt-[7%] z-18 ${
                 isBlack ? 'text-black' : 'text-white'
               }`}
             >
@@ -117,7 +133,7 @@ export default function RootLayout({ children }) {
               </ul>
             </div>
             <AnimatedDivider />
-            <div className="custom-footer-marquee  mt-8">
+            <div className="custom-footer-marquee  mt-8 ">
               <p className=" custom-footer-text">
                 <span className="font-gangItem font px-10">TEQNOID</span>
                 <span className="font-gangItem font px-10">TO BUILD</span>
