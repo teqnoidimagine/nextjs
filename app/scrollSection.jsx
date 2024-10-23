@@ -41,7 +41,7 @@ function ScrollSection() {
 
   
     <VideoBackground /> 
-     <CardSection className="height-[80vh] mt-80vh"/>
+     <CardSection className=""/>
 
     </>
   );
