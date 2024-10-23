@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence,motion } from 'framer-motion'
 import Link from 'next/link';
 // import '@/styles/styles.scsws';
 import { useRouter } from 'next/navigation';
