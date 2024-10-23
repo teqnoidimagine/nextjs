@@ -2,15 +2,16 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
 import gsap from 'gsap';
-// import Logo from '@/app/assets/logo.svg';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Chakra from './components/Layout/chakra'
- const Header = () => {
+import Chakra from './components/Layout/chakra';
+
+const Header = () => {
   gsap.registerPlugin(ScrollTrigger);
 
   const containerRef = useRef(null); // Reference to the horizontal scroll container
   const sketchRef = useRef(); // Reference to the p5.js sketch container
 
+  // GSAP animation for horizontal scrolling
   useEffect(() => {
     const container = containerRef.current;
 
@@ -24,7 +25,7 @@ import Chakra from './components/Layout/chakra'
             start: 'top top',
             end: () => `+=${container.scrollWidth}`,
             pin: true,
-            scrub: true,
+            scrub: 0.3, // Reduce scrub precision to ease the load
           },
         });
       } else {
@@ -40,21 +41,24 @@ import Chakra from './components/Layout/chakra'
         opacity: 0.6,
         duration: 1.5,
         ease: "power1.in",
-        stagger: 0.5
+        stagger: 0.5,
       });
       gsap.to(".animate-text span", {
         y: 0,
         opacity: 1,
         duration: 1.5,
         ease: "power1.in",
-        stagger: 0.5
+        stagger: 0.5,
       });
     }
   }, []);
 
+  // Lazy load p5.js sketch on user interaction
   useEffect(() => {
+    let p5Instance = null;
     let blocks = [];
-    let cols, rows, size = 80;
+    let cols, rows;
+    const size = 80;
     let mouseMoved = false;
     let timer;
     let lastMouseX, lastMouseY;
@@ -66,7 +70,7 @@ import Chakra from './components/Layout/chakra'
         this.y = y;
         this.i = i;
         this.j = j;
-        this.originalColor = '#1f1f1f'; // Lighter color for the blocks
+        this.originalColor = '#1f1f1f';
         this.c = this.originalColor;
       }
 
@@ -101,6 +105,7 @@ import Chakra from './components/Layout/chakra'
     const sketch = (p) => {
       p.setup = () => {
         p.createCanvas(p.windowWidth, p.windowHeight);
+        p.frameRate(30); // Limit FPS to 30 for better performance
         p.rectMode(p.CENTER);
         
         cols = Math.floor(p.width / size);
@@ -132,7 +137,7 @@ import Chakra from './components/Layout/chakra'
               const isHovered = (p.mouseX > block.x - size / 2 && p.mouseX < block.x + size / 2 &&
                                 p.mouseY > block.y - size / 2 && p.mouseY < block.y + size / 2);
               if (isHovered) {
-                block.paint('#6957F7'); // Lighter purple color
+                block.paint('#6957F7');
                 highlightNeighbors(i, j, boxesToHighlight);
               }
               block.display(p);
@@ -156,7 +161,7 @@ import Chakra from './components/Layout/chakra'
       };
 
       function getBoxesToHighlight(speed) {
-        if (speed > 15) return Math.min(10, 4); // Cap at 10 boxes
+        if (speed > 15) return Math.min(10, 4);
         if (speed > 10) return Math.min(10, 3);
         if (speed > 5) return Math.min(10, 2);
         if (speed > 2) return Math.min(10, 2);
@@ -181,7 +186,7 @@ import Chakra from './components/Layout/chakra'
           const ni = i + dir.di;
           const nj = j + dir.dj;
           if (ni >= 0 && ni < cols && nj >= 0 && nj < rows) {
-            blocks[ni][nj].paint('#6957F7'); // Lighter purple
+            blocks[ni][nj].paint('#6957F7');
           }
         }
       }
@@ -210,52 +215,49 @@ import Chakra from './components/Layout/chakra'
       };
     };
 
-    const p5Instance = new p5(sketch, sketchRef.current);
+    const handleInteraction = () => {
+      if (!p5Instance) {
+        p5Instance = new p5(sketch, sketchRef.current);
+      }
+    };
+
+    window.addEventListener('scroll', handleInteraction);
+    window.addEventListener('mousemove', handleInteraction);
+    window.addEventListener('touchstart', handleInteraction);
 
     return () => {
-      p5Instance.remove();
+      window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('mousemove', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
+      if (p5Instance) p5Instance.remove();
     };
   }, []);
 
   return (
     <div>
-    
-      <div ref={sketchRef} className="fixed top-0 left-0 z-0 w-full h-[1000px]" />
-   
+      <div ref={sketchRef} className="fixed top-0 left-0 z- w-full h-[1000px]" />
 
       <div className="absolute inset-0 flex items-center justify-center z-10 p-20 pl-48">
         <div className="text-center mt-8 animate-text text-white uppercase font-bold">
-        <div className="leading-[140px] text-[155px]">
-  {/* First Line: "Unleash", Chakra SVG, and "your" */}
-  <div className="flex items-start">
-    <span className="bg-[#D9F24E] text-[#1f1f1f] p-5 transform rotate-[-3deg] inline-block">
-      Unleash
-    </span>
-
-    {/* Chakra SVG immediately after "Unleash" */}
-    <span className="inline-block m-2 mt-[-32px]">
-      <Chakra />
-    </span>
-
-    <span className="inline-block">
-      your
-    </span>
-  </div>
-
-  {/* Second Line: "Brand Potential" */}
-  <div className="block">
-    Brand  Potential
-  </div>
-</div>
-
-
-
-          <span className="block leading-[140px] text-[155px]">
-         
-          </span>
+          <div className="leading-[140px] text-[155px]">
+            {/* First Line: "Unleash", Chakra SVG, and "your" */}
+            <div className="flex items-start">
+              <span className="bg-[#D9F24E] text-[#1f1f1f] p-5 transform rotate-[-3deg] inline-block">
+                Unleash
+              </span>
+              <span className="inline-block m-2 mt-[-32px]">
+                <Chakra />
+              </span>
+              <span className="inline-block">
+                your
+              </span>
+            </div>
+            {/* Second Line: "Brand Potential" */}
+            <div className="block">Brand Potential</div>
+          </div>
         </div>
       </div>
-      <div ref={containerRef} className="relative" />
+    
     </div>
   );
 };
