@@ -3,20 +3,18 @@ import { useEffect, useRef } from 'react';
 import './videoBackground.css';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-// import mySvg from '/assets/ss.svg'; // Path to your SVG file
 import Image from 'next/image';
 
 const VideoBackground = () => {
     const videoRef = useRef(null);
-    const sectionRef = useRef(null);
-    const triggerRef = useRef(null);
   
     gsap.registerPlugin(ScrollTrigger);
     const mySvg = "/assets/ss.svg";
     const mySvgBG = "/assets/ss0.svg";
+
     useEffect(() => {
       const pin = gsap.fromTo(
-        sectionRef.current,
+        document.querySelector('.marquee-container'),
         {
           translateX: 0,
         },
@@ -25,17 +23,15 @@ const VideoBackground = () => {
           ease: "none",
           duration: 0.5,
           scrollTrigger: {
-            trigger: triggerRef.current,
+            trigger: ".trigger-section",
             start: "top top",
             end: "2000 top",
             scrub: 0.05,
             pin: true,
-            // markers:true
           },
         }
       );
       return () => {
-        {/* A return function for killing the animation on component unmount */ }
         pin.kill();
       };
     }, []);
@@ -48,7 +44,8 @@ const VideoBackground = () => {
 
     return (
         <div>
-<div className='relative w-full h-screen overflow-hidden bg-black'>
+          {/* First section with background SVG */}
+          <div className='relative w-full h-[100vh] overflow-hidden bg-black'>
   <div className='z-12 absolute flex items-end justify-end'>
     <Image src={mySvgBG} alt="My SVG" width={900} height={900} className='w-[100vw] h-[80vh] m-20 ml-96 right-0 ' />
   </div>
@@ -66,42 +63,36 @@ const VideoBackground = () => {
   </div>
 </div>
 
-
-
-<div className="video-container">
+          {/* Video Section 1 */}
+          <div className="video-section trigger-section relative z-40 w-full h-screen">
             <video
-                ref={videoRef}
-                autoPlay
-                loop
-                muted
-                className="video-background"
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src="/assets/texture2.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+              <source src="/assets/texture2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
-            <div className="overlay">
-            <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
-          <p className="animate-text ">
-            {/* <span>AI1 to </span>
-            <span className="font-gangItem font px-10 font-normal"> SaaS</span>
-            <span>To</span><br />
-            <span className="font-gangItem font px-5 font-normal">Deeptech </span>
-            <span>to series C</span><br /> */}
-           
-          </p>
-        </h1>
+            <div className="overlay absolute inset-0 flex items-center justify-center">
+              <h1 className="text-7xl uppercase font-bold text-center">
+                Empowering Startups At Every Stage from Pre-seed to series C
+              </h1>
             </div>
-        </div>
-          <div className="video-container2">
+          </div>
+
+          {/* Video Section 2 */}
+          <div className="video-section relative z-40 w-full h-screen">
             <video
-                ref={videoRef}
-                autoPlay
-                loop
-                muted
-                className="video-background2"
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src="/assets/bgGradient.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+              <source src="/assets/bgGradient.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
             <div className="overlay">
             <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
@@ -114,17 +105,19 @@ const VideoBackground = () => {
           </p>
         </h1>
             </div>
-        </div>  
-        <div className="video-container1">
+          </div>
+
+          {/* Video Section 3 */}
+          <div className="video-section relative z-40 w-full h-screen">
             <video
-                ref={videoRef}
-                autoPlay
-                loop
-                muted
-                className="video-background1"
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              className="absolute inset-0 w-full h-full object-cover"
             >
-                <source src="/assets/shortTexture.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
+              <source src="/assets/shortTexture.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
             </video>
             <div className="overlay">
             <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
@@ -137,7 +130,7 @@ const VideoBackground = () => {
           </p>
         </h1>
             </div>
-        </div>  
+          </div>
         </div>
     );
 };

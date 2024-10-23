@@ -3,7 +3,7 @@
 import { AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import './globals.css';
-import VideoBackground from '@/app/videoBackground';
+import VideoBackground from './videoBackground';
 import ScrollSection from '@/app/scrollSection';
 import AnimatedDivider from './components/Layout/AnimatedDivider';
 import { useEffect, useState,useRef } from 'react';
@@ -85,8 +85,10 @@ export default function RootLayout({ children }) {
 
           <AnimatePresence mode="wait">{children}</AnimatePresence>
 
-          {/* <VideoBackground /> */}
+          <VideoBackground /> 
           <ScrollSection />
+
+  
           <footer>
 <div className='video-container'>
 <video

@@ -40,7 +40,6 @@ function ScrollSection() {
 <>
 
   
-    <VideoBackground /> 
      <CardSection className=""/>
 
     </>

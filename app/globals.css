@@ -22,11 +22,12 @@
 .canvas{
   width: 80vw;
   height: 80vh;
-  margin: 100vh 20vh 20vh 20vh;
+  margin: 20vh;
+  background-color: white;
   /* margin:20vh; */
   background-color: transparent;
   border-radius: 20px;
-  z-index: 12;
+  z-index: 21;
   position: relative;
   /* border: 1px solid red; */
   overflow: hidden;
