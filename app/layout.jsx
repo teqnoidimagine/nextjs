@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <div className="main">
-        <nav className="navbar sticky top-0 z-50">
+        <nav className="navbar sticky top-0 z-80">
   <div className="absolute z-15 inset-0 flex gap-20 justify-between m-10 mt-0 h-[150px] items-center">
     <div className="z-16 p-4 bg-black flex items-center justify-center rounded-xl relative">
       <div className="flex flex-col items-center justify-center">
