@@ -68,7 +68,7 @@ export default function RootLayout({ children }) {
     </div>
     <div
       className={`sudo1 z-16 p-4 w-36 transition-all duration-500 ease-in-out 
-        bg-white text-black
+        bg-black text-white
        text-center text-lg flex items-center justify-center rounded-xl`}
     >
       GET <br />
