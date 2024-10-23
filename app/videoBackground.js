@@ -69,6 +69,7 @@ const VideoBackground = () => {
               ref={videoRef}
               autoPlay
               loop
+              preload="metadata"
               muted
               className="absolute inset-0 w-full h-full object-cover"
             >
@@ -76,25 +77,6 @@ const VideoBackground = () => {
               Your browser does not support the video tag.
             </video>
             <div className="overlay absolute inset-0 flex items-center justify-center">
-              <h1 className="text-7xl uppercase font-bold text-center">
-                Empowering Startups At Every Stage from Pre-seed to series C
-              </h1>
-            </div>
-          </div>
-
-          {/* Video Section 2 */}
-          <div className="video-section relative z-40 w-full h-screen">
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              className="absolute inset-0 w-full h-full object-cover"
-            >
-              <source src="/assets/bgGradient.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="overlay">
             <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
           <p className="animate-text ">
             <span>Empowering </span>
@@ -106,6 +88,8 @@ const VideoBackground = () => {
         </h1>
             </div>
           </div>
+
+        
 
           {/* Video Section 3 */}
           <div className="video-section relative z-40 w-full h-screen">
@@ -127,6 +111,31 @@ const VideoBackground = () => {
             <span>to</span><br />
             <span className="font-gangItem font px-5 font-normal">Deeptech </span>
             {/* <span>to series C</span><br /> */}
+          </p>
+        </h1>
+            </div>
+          </div>
+            {/* Video Section 2 */}
+            <div className="video-section relative z-40 w-full h-screen">
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/assets/bgGradient.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="overlay">
+            <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
+          <p className="animate-text ">
+            <span>Embarce the </span>
+            <span className="font-gangItem font px-10 font-normal">Next Chapter</span>
+            <span>of</span><br />
+            <span className="font-gangItem font px-5 font-normal">Expansion adn Potentialropel </span>
+         
           </p>
         </h1>
             </div>
