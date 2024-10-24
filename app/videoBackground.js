@@ -64,7 +64,7 @@ const VideoBackground = () => {
 </div>
 
           {/* Video Section 1 */}
-          <div className="video-section trigger-section relative z-40 w-full h-screen">
+          <div className="video-section trigger-section relative z-10 w-full h-screen">
             <video
               ref={videoRef}
               autoPlay
@@ -92,7 +92,7 @@ const VideoBackground = () => {
         
 
           {/* Video Section 3 */}
-          <div className="video-section relative z-40 w-full h-screen">
+          <div className="video-section relative z-10 w-full h-screen">
             <video
               ref={videoRef}
               autoPlay
@@ -116,7 +116,7 @@ const VideoBackground = () => {
             </div>
           </div>
             {/* Video Section 2 */}
-            <div className="video-section relative z-40 w-full h-screen">
+            <div className="video-section relative z-10 w-full h-screen">
             <video
               ref={videoRef}
               autoPlay
