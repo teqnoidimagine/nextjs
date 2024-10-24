@@ -101,39 +101,41 @@ export default function RootLayout({ children }) {
                 <source src="/assets/FooterVideo.mp4" type="video/mp4" /></video>
 </div>
        
-            <div
-              className={`text-xl flex gap-24 px-[5%] pt-[7%] z-18 ${
-                isBlack ? 'text-black' : 'text-white'
-              }`}
-            >
-              <ul className="flex flex-col text-left">
-                DISCOVER
-                <li>About</li>
-                <li>Contact</li>
-                <li>Services</li>
-                <li>Blog</li>
-              </ul>
-              <ul className="flex flex-col text-left">
-                SERVICES
-                <li>Branding &amp; UX UI Design</li>
-                <li>Video, Animation &amp; Illustration</li>
-                <li>Web &amp; App Development</li>
-              </ul>
-              <ul className="flex flex-col text-left">
-                CASE STUDIES
-                <li>DCC Animal Hospital</li>
-                <li>DCC in India</li>
-                <li>A&apos;alda Vet 360</li>
-                <li>Pandaa</li>
-                <li>Roperro</li>
-                <li>Azar</li>
-                <li>Audi</li>
-                <li>Slide</li>
-                <li>Make in India</li>
-                <li>Indigo</li>
-                <li>Jobket</li>
-              </ul>
-            </div>
+<div
+  className={`text-xl flex gap-24 px-[5%] pt-[7%] z-18 ${
+    isBlack ? 'text-black' : 'text-white'
+  }`}
+>
+  <ul className="flex flex-col text-left">
+    DISCOVER
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">About</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Contact</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Services</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Blog</li>
+  </ul>
+  <ul className="flex flex-col text-left">
+    SERVICES
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Branding &amp; UX UI Design</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Video, Animation &amp; Illustration</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Web &amp; App Development</li>
+  </ul>
+  <ul className="flex flex-col text-left">
+    CASE STUDIES
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">DCC Animal Hospital</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">DCC in India</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">A&apos;alda Vet 360</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Pandaa</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Roperro</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Azar</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Audi</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Slide</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Make in India</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Indigo</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Jobket</li>
+  </ul>
+</div>
+
+
             <AnimatedDivider />
             <div className="custom-footer-marquee  mt-8 ">
               <p className=" custom-footer-text">

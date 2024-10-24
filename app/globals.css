@@ -20,9 +20,9 @@
   scrollbar-width: none;  /* Firefox */
 }
 .canvas{
-  width: 80vw;
+  width: 70vw;
   height: 80vh;
-  margin: 20vh;
+  margin: 20vh 0vh 20vh 50vh;
   background-color: white;
   /* margin:20vh; */
   background-color: transparent;
@@ -196,6 +196,17 @@ a:after {
   color:aqua;
   width: 0;
 }
+.custom-transition {
+  @apply transition ease-in-out duration-300 relative; /* Tailwind transition, easing, and duration */
+  width: 50%; /* Initial width */
+  left: 0; /* Initial left position */
+}
+
+.custom-transition:hover {
+  width: 100%; /* Change width on hover */
+  left: 1.25rem; /* Change left on hover (5 in Tailwind units) */
+}
+
 a:hover:after { 
   width: 100%; 
   left: 0; 

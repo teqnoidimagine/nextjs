@@ -12,7 +12,7 @@ extend(geometry);
 
 // Main component for the CardSection
 export const CardSection = () => (
-  <div className="canvas">
+  <div className="canvas border border-gray-100">
     <Canvas dpr={[1, 1.5]}>
       <ScrollControls pages={4} infinite>
         {/* Wrap your 3D content inside Suspense for error boundaries and async loading */}
