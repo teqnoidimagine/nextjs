@@ -51,7 +51,7 @@ const VideoBackground = () => {
   </div>
   
   <div className='z-13 absolute flex justify-center items-center'>
-    <div className="text-[150px] marquee font-uppercase text-white uppercase">
+    <div className="sm:text-[30px] md:text-[60px] lg:text-[90px] xl:text-[120px] 2xl:text-[150px] marquee font-uppercase text-white uppercase">
       <p>
       Frontend web development - Backend development
       </p>
@@ -77,7 +77,7 @@ const VideoBackground = () => {
               Your browser does not support the video tag.
             </video>
             <div className="overlay absolute inset-0 flex items-center justify-center">
-            <h1 className="text-7xl uppercase w-full font-bold flex items-center justify-center text-center">
+            <h1 className="sm:text-[3xl] md:text-[4xl] lg:text-[5xl] xl:text-[6xl] 2xl:text-[8xl] uppercase w-full font-bold flex items-center justify-center text-center">
           <p className="animate-text ">
             <span>Empowering </span>
             <span className="font-gangItem font px-10 font-normal"> Startups At</span>

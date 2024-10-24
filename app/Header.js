@@ -235,7 +235,7 @@ const Header = () => {
 
   return (
     <div>
-      <div ref={sketchRef} className="fixed top-0 left-0 z- w-full h-[1000px]" />
+      <div ref={sketchRef} className="fixed top-0 left-0 z- w-[100vw] h-[1000px]" />
 
       <div className="absolute inset-0 flex items-center justify-center z-10 p-20 pl-48">
         <div className="text-center mt-8 animate-text text-white uppercase font-bold">

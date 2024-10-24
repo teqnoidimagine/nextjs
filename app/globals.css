@@ -191,7 +191,7 @@ a:after {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #fff;
+  background: #D9F24E;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   color:aqua;
   width: 0;
@@ -277,6 +277,7 @@ a:hover {
   background-image: url('../public/assets/TeqLogo.png');
   background-size: cover; /* Ensure the image covers the div */
   background-position: center; /* Center the background image */
+  /* width:100% */
 }
 
 .bg-image-two {

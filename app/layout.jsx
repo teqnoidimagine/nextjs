@@ -44,9 +44,9 @@ export default function RootLayout({ children }) {
         <div className="main">
         <nav className="navbar sticky top-0 z-80">
   <div className="absolute z-15 inset-0 flex gap-20 justify-between m-10 mt-0 h-[150px] items-center">
-    <div className="z-16 p-4 bg-black flex items-center justify-center rounded-xl relative">
+    <div className="z-16  p-4 bg-black flex items-center justify-center rounded-xl relative">
       <div className="flex flex-col items-center justify-center">
-        <div className="sudo relative w-20 h-40 transition-all duration-300 ease-in-out overflow-hidden">
+        <div className="sudo relative w-32 h-40 transition-all duration-300 ease-in-out overflow-hidden">
           <div className="bg-image-one absolute inset-0 transition-opacity duration-300 ease-in-out"></div>
           <div className="bg-image-two absolute inset-0 transition-all duration-300 ease-in-out opacity-0 w-0 h-full"></div>
         </div>
@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
           <Link href="/about">About</Link>
         </li>
         <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/portfolio">Services</Link>
         </li>
         <li className={`transition-colors duration-500 ease-in-out ${isBlack ? 'text-[#1F1F1F]' : 'text-white'}`}>
           <Link href="/blog">Blog</Link>
