@@ -107,33 +107,42 @@ export default function RootLayout({ children }) {
   }`}
 >
   <ul className="flex flex-col text-left">
-    DISCOVER
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">About</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Contact</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Services</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Blog</li>
+    <div className='flex gap-2 items-center ml-[-10px]'>
+      <span className="w-2 h-2 bg-black"></span><span>DISCOVER</span>
+    </div>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">About</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Contact</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Services</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Blog</li>
   </ul>
+  
   <ul className="flex flex-col text-left">
-    SERVICES
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Branding &amp; UX UI Design</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Video, Animation &amp; Illustration</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Web &amp; App Development</li>
+    <div className='flex gap-2 items-center ml-[-10px]'>
+      <span className="w-2 h-2 bg-black"></span><span>SERVICES</span>
+    </div>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Branding &amp; UX UI Design</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Video, Animation &amp; Illustration</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Web &amp; App Development</li>
   </ul>
+  
   <ul className="flex flex-col text-left">
-    CASE STUDIES
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">DCC Animal Hospital</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">DCC in India</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">A&apos;alda Vet 360</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Pandaa</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Roperro</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Azar</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Audi</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Slide</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Make in India</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Indigo</li>
-    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer">Jobket</li>
+    <div className='flex gap-2 items-center ml-[-10px]'>
+      <span className="w-2 h-2 bg-black"></span><span>CASE STUDIES</span>
+    </div>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">DCC Animal Hospital</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">DCC in India</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">A&apos;alda Vet 360</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Pandaa</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Roperro</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Azar</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Audi</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Slide</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Make in India</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Indigo</li>
+    <li className="hover:underline hover:underline-offset-4 hover:decoration-[1px] transition duration-300 ease-in-out cursor-pointer hover:text-blue-500">Jobket</li>
   </ul>
 </div>
+
 
 
             <AnimatedDivider />

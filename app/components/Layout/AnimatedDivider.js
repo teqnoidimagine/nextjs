@@ -42,7 +42,7 @@ const AnimatedDivider = () => {
     return (
         <div
             ref={dividerRef}
-            className="fixed top-[60%] left-1/2 h-[1px] bg-black transform -translate-x-1/2 z-28"
+            className="fixed top-[60%] left-1/2 h-[1px] bg-neutral-400 transform -translate-x-1/2 z-28"
             style={{ width: '0%',zIndex:25 }} // Initial width set to 0
         />
     );
